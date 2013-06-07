@@ -26,9 +26,11 @@ namespace POS.views
 
                 if (!this.IsPostBack)
                 {
-                    ListLoad();
+                    
                     DrpListLoad();
                 }
+
+                ListLoad();
             }
 
 

@@ -21,10 +21,7 @@ namespace POS.views
         {
             myList = lstvBrand;
 
-            if (!this.IsPostBack)
-            {
-                ListLoad();
-            }
+            ListLoad();
         }
 
         public static void ListLoad()

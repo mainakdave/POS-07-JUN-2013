@@ -25,8 +25,10 @@ namespace POS.views
             if (!this.IsPostBack)
             {
                 DrpListLoad();
-                ListLoad();
+                
             }
+
+            ListLoad();
         }
 
         private void DrpListLoad()

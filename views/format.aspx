@@ -23,6 +23,9 @@
             $("#alertBox").css("top", $(window).outerHeight() / 2);
             $("#alertBox").css("left", $(window).outerWidth() / 2);
 
+            //$(".ui-keyboard").css("top", "0");
+
+            
 
             /*
             var IU = 'I';
@@ -87,7 +90,9 @@
                                 }
                               ]);
 
-                            clearAllElements();
+                                clearAllElements();
+
+                                __doPostBack("<%= UpdatePanel1.ClientID %>");
                         }
                     );
 
@@ -129,7 +134,9 @@
                                 }
                               ]);
 
-                            clearAllElements();
+                                clearAllElements();
+
+                                __doPostBack("<%= UpdatePanel1.ClientID %>");
                         }
                     );
 
@@ -201,6 +208,8 @@
                                     'priority': 'error'
                                 }
                               ]);
+
+                                __doPostBack("<%= UpdatePanel1.ClientID %>");
                     }
                 );
             } else {
@@ -233,6 +242,8 @@
         }
     </script>
 
+    
+
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
 
@@ -243,7 +254,7 @@
             <div class="span6">
                 <form class="navbar-form pull-left" id="formatForm" action="format.aspx">
 
-                    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePageMethods="true">
+                    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true">
                             </asp:ScriptManager>  
 
                     <div id="format">
@@ -393,11 +404,13 @@
        
                 
 
-
+                
         
        
         
 
         
 </asp:Content>
+
+
 

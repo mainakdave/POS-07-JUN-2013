@@ -83,7 +83,9 @@
                                 }
                               ]);
 
-                            clearAllElements();
+                                clearAllElements();
+
+                                __doPostBack("<%= UpdatePanel1.ClientID %>");
                         }
                     );
 
@@ -119,7 +121,9 @@
                                 }
                               ]);
 
-                            clearAllElements();
+                                clearAllElements();
+
+                                __doPostBack("<%= UpdatePanel1.ClientID %>");
                         }
                     );
 
@@ -186,6 +190,8 @@
                                     'priority': 'error'
                                 }
                               ]);
+
+                                __doPostBack("<%= UpdatePanel1.ClientID %>");
                     }
                 );
             } else {
@@ -227,7 +233,7 @@
             <div class="span6">
                 <form class="navbar-form pull-left" id="commentForm" action="comment.aspx">
 
-                    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePageMethods="true">
+                    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true">
                             </asp:ScriptManager>  
 
                     <div id="comment">

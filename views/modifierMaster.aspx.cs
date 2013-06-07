@@ -24,8 +24,10 @@ namespace POS.views
 
             if (!this.IsPostBack)
             {
-                ListLoad();
+                
             }
+
+            ListLoad();
         }
 
         public static void ListLoad()

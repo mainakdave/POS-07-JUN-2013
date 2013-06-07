@@ -41,9 +41,11 @@ namespace POS.views
 
                 //imgUpload.UnloadImage();
 
-                ListLoad();
+                
                 DrpListLoad();
             }
+
+            ListLoad();
         }
 
         private void DrpListLoad()

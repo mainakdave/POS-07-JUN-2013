@@ -75,7 +75,10 @@
                                 }
                               ]);
 
-                            clearAllElements();
+                                clearAllElements();
+
+                                __doPostBack("<%= UpdatePanel2.ClientID %>");
+
                         }
                     );
 
@@ -107,7 +110,9 @@
                                 }
                               ]);
 
-                            clearAllElements();
+                                clearAllElements();
+
+                                __doPostBack("<%= UpdatePanel2.ClientID %>");
                         }
                     );
 
@@ -135,6 +140,7 @@
                 //__doPostBack("id", id);
                 //return false;
 
+                
 
             }
         }
@@ -162,6 +168,8 @@
                                     'priority': 'error'
                                 }
                               ]);
+
+                                __doPostBack("<%= UpdatePanel2.ClientID %>");
                     }
                 );
             } else {
@@ -195,7 +203,7 @@
             <div class="span6">
                 <form class="navbar-form pull-left" id="brandForm" action="brand.aspx">
 
-                    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePageMethods="true">
+                    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true">
                             </asp:ScriptManager>  
 
                     <div id="brand">
@@ -238,7 +246,7 @@
 
             <div class="span6">
 
-            <asp:UpdatePanel runat="server" ID="UpdatePanel2" UpdateMode="Always">
+            <asp:UpdatePanel runat="server" ID="UpdatePanel2" UpdateMode="Conditional">
                 <ContentTemplate>
 
                     <asp:Panel ID="Panel1" ScrollBars="Vertical" Height="300" runat="server">
@@ -255,7 +263,7 @@
             </LayoutTemplate>
 
             <ItemTemplate>
-                <tr onmouseup="updateRow(<%#Eval("brandID") %>, '<%#Eval("brandName") %>', '<%#Eval("description ") %>')">
+                <tr onmouseup="updateRow(<%#Eval("brandID") %>, '<%#Eval("brandName") %>', '<%#Eval("description") %>');  ">
                     <td>
                         <asp:Label ID="lblDeptID" runat="Server" Text='<%#Eval("brandID") %>' />
                     </td>

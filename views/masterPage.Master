@@ -42,11 +42,14 @@
                     position: {
                         of: "body",
                         my: "center center",
-                        at: "center center"
+                        at: "center center",
+                        at2: 'center center'
                     }
                 })
                 .addTyping();
             });
+
+            
         </script>
 
     </asp:ContentPlaceHolder>

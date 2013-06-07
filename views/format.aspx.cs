@@ -39,8 +39,10 @@ namespace POS.views
 
                 //imgUpload.UnloadImage();
 
-                ListLoad();
+                
             }
+
+            ListLoad();
         }
 
         public static void ListLoad()

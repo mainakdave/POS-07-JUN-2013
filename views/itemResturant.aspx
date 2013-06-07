@@ -69,7 +69,9 @@
                                 }
                               ]);
 
-                            clearAllElements();
+                                clearAllElements();
+
+                                __doPostBack("<%= UpdatePanel2.ClientID %>");
                         }
                     );
 
@@ -114,7 +116,9 @@
                                 }
                               ]);
 
-                            clearAllElements();
+                                clearAllElements();
+
+                                __doPostBack("<%= UpdatePanel2.ClientID %>");
                         }
                     );
 
@@ -166,6 +170,8 @@
                                     'priority': 'error'
                                 }
                               ]);
+
+                                __doPostBack("<%= UpdatePanel2.ClientID %>");
                     }
                 );
             } else {
@@ -202,7 +208,7 @@
             <div class="span6">
                 <form class="navbar-form pull-left" id="itemRestaurantForm" action="itemResturant.aspx">
 
-                    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePageMethods="true">
+                    <asp:ScriptManager runat="server" ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true">
                             </asp:ScriptManager>  
 
                     <div id="itemRestaurant">

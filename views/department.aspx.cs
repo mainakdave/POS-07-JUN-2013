@@ -39,10 +39,10 @@ namespace POS.views
                 
                 //imgUpload.UnloadImage();
 
-                ListLoad();
             }
-            
 
+
+            ListLoad();
             
         }
 

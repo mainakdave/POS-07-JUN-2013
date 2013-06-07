@@ -40,9 +40,9 @@ namespace POS.views
                 imgUpload.LoadImageFromFileSystem(sourceImageFilePath);
 
                 //imgUpload.UnloadImage();
-
-                ListLoad();
             }
+
+            ListLoad();
         }
 
         private static void ListLoad()
